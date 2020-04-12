@@ -1,11 +1,12 @@
-document.getElementById("balloonImg").addEventListener("keydown", changeSize);
-console.log("js linked");
+document.addEventListener("keydown", changeSize);
+
 function changeSize() {
-    console.log("function is called");
     var e = event.keyCode;
-    console.log("function runs")
+    var balloonImgPX = 30;
     if (e == 73){
-        alert("yes")
-        //document.getElementById("balloonImg").style.fontSize +=5;
+        balloonImgPX = document.getElementById("balloonImg").style.fontSize = (balloonImgPX + 5) +"px";
+    }
+    else if (e == 68){
+        balloonImgPX = document.getElementById("balloonImg").style.fontSize = (balloonImgPX - 10) +"px";
     }
 }
