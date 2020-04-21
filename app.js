@@ -6,7 +6,7 @@ function changeSize() {
     if (e == 73){
         if (parseInt(bSize)>60){
             document.getElementById("balloonImg").innerHTML = "💥";
-            document.removeEventListener('keyup', changeSize);
+            document.removeEventListener('keydown', changeSize);
         }
         else{
             if(bSize==""){
@@ -20,8 +20,9 @@ function changeSize() {
     else if (e == 68){
         console.log("d was pressed");
         if(parseInt(bSize)==0){
+            document.getElementById("balloonImg").style.fontSize=30+"px";
             document.getElementById("balloonImg").innerHTML = "Done";
-            document.removeEventListener('keyup', changeSize);
+            document.removeEventListener('keydown', changeSize);
         }
         else{
             if(bSize==""){
